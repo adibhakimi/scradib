@@ -57,7 +57,7 @@ def get_navi(navi):
             for rec in recs: 
                 st.write(item(rec[1]))
                 
-        jobid = st.radio("Career ID: ")
+        jobid = st.number_input("Career ID: ", min_value=0000, max_value=9999, step=1)
         if jobid != 0:
             recommend(item_id = jobid, num=10)
                 
